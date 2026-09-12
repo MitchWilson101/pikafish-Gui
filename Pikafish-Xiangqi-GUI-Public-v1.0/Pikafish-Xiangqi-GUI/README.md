@@ -87,7 +87,7 @@ Replace `YOUR-USERNAME` with your GitHub username after you create the repositor
 Connection settings are stored only in the user's home folder in:
 
 ```text
-.pikafish_gui.json
+.pikafish_xiangqi_public.json
 ```
 
 That file is ignored by Git and should never be committed.
@@ -110,7 +110,7 @@ The EXE is built with PyInstaller's `--windowed` option, so it launches without 
 The application stores local data in the user's home directory:
 
 ```text
-.pikafish_gui.json
+.pikafish_xiangqi_public.json
 .pikafish_positions.json
 .pikafish_game_stats.json
 ```
@@ -123,7 +123,7 @@ The public source contains **no personal SSH username, IP address, private key p
 
 Do not commit:
 
-- `.pikafish_gui.json`
+- `.pikafish_xiangqi_public.json`
 - SSH private keys
 - passwords
 - local IP addresses if you consider them sensitive
@@ -144,6 +144,6 @@ This GUI source is released under the MIT License. See [`LICENSE`](LICENSE).
 
 ## Status
 
-**Public v1.0**
+**Public v1.0.1**
 
 The project began as a personal Raspberry Pi + Pikafish interface and has grown into a Xiangqi analysis and training application.

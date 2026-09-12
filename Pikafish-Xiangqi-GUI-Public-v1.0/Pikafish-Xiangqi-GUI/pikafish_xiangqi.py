@@ -676,7 +676,7 @@ class EvaluationGraph(QWidget):
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super().__init__(); self.setWindowTitle("Pikafish Xiangqi - Public v1.0"); self.resize(1080,700); self.setMinimumSize(900,620)
+        super().__init__(); self.setWindowTitle("Pikafish Xiangqi - Public v1.0.1"); self.resize(1080,700); self.setMinimumSize(900,620)
         self.board,self.turn=parse_fen(START_FEN); self.piece_style="european"; self.check_flash_on=True
         self.moves=[]; self.history=[]; self.selected=None; self.flipped=False; self.pending=None; self.analysis_running=False; self.hint_move=None; self.last_analysis_depth=None
         self.last_engine_score=None; self.last_engine_pv=""; self.best_line_moves=[]
@@ -702,7 +702,7 @@ class MainWindow(QMainWindow):
         self.training_mode=False; self.training_message="Training: off"
         self.engine_q=queue.Queue(); self.engine=RemoteEngine(self.engine_q)
         self.sound_q=queue.Queue(); self.sound_path=self._prepare_move_sound(); threading.Thread(target=self._sound_worker, daemon=True).start()
-        self.cfg_path=os.path.join(os.path.expanduser("~"),".pikafish_gui.json"); self.cfg=self.load_cfg()
+        self.cfg_path=os.path.join(os.path.expanduser("~"),".pikafish_xiangqi_public.json"); self.cfg=self.load_cfg()
         self.build_ui(); self.update_state_labels()
         self.poll_timer=QTimer(self); self.poll_timer.timeout.connect(self.poll_engine); self.poll_timer.start(80)
         self.flash_timer=QTimer(self); self.flash_timer.timeout.connect(self.flash_check); self.flash_timer.start(500)

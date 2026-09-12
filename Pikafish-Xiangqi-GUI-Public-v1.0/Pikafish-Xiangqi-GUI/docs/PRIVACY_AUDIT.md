@@ -15,3 +15,5 @@ Public connection defaults:
 - Engine path: blank
 - SSH key: blank
 - Password: never stored by the GUI
+
+- PASS — Public build uses its own config filename and will not load an existing private/development `.pikafish_gui.json`.
